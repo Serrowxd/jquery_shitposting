@@ -1,0 +1,9 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #2f2f2f;
+  font-family: "Maven Pro", sans-serif;
+  color: white;
+}
