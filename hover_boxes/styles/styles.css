@@ -23,8 +23,16 @@
   height: 80%;
   background: #cecece;
 }
+.showme {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 .card {
   position: absolute;
+}
+#card-1 {
+  opacity: 0;
+  visibility: hidden;
 }
 #card-2 {
   opacity: 0;
