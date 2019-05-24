@@ -5,5 +5,42 @@
   height: 100vh;
   background: #2f2f2f;
   font-family: "Maven Pro", sans-serif;
+}
+
+.move-button {
   color: white;
+  font-size: 5rem;
+  transition: 0.15s;
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(0, 225, 255, 0.7);
+  }
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background: #cecece;
+}
+
+// Cards
+.card {
+  position: absolute;
+}
+
+#card-1 {
+}
+
+#card-2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#card-3 {
+  opacity: 0;
+  visibility: hidden;
 }
