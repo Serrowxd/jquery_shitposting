@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
   background: #2f2f2f;
-  font-family: "Maven Pro", sans-serif;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .move-button {
@@ -25,29 +25,91 @@
   width: 80%;
   height: 80%;
   background: #cecece;
+  position: relative;
+  overflow: hidden;
 }
 
 .showme {
   opacity: 1 !important;
   visibility: visible !important;
+  z-index: 10;
+}
+
+.hideme-right {
+  animation: boxAnimation 5s forwards, hideAnimationRight 3.5s 1s forwards;
+  position: inherit;
+  z-index: 20;
+}
+
+.hideme-left {
+  animation: boxAnimation 5s forwards, hideAnimationLeft 3.5s 1s forwards;
+  position: inherit;
+  z-index: 20;
 }
 
 // Cards
 .card {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
 }
 
-#card-1 {
-  opacity: 0;
-  visibility: hidden;
+// Animations
+
+@keyframes boxAnimation {
+  // Shrink box (total)
+  // Slight increase above shrink amount (total)
+  // Box Shadow (total?)
+  // Move whole box left/right
+  // Hide box @ 100% (off-screen)
+
+  20% {
+    width: 80%;
+    height: 80%;
+  }
+
+  50% {
+    width: 90%;
+    height: 90%;
+    box-shadow: 10px 0 10px #2f2f2f;
+  }
+
+  100% {
+    width: 90%;
+    height: 90%;
+    box-shadow: 10px 0 10px #2f2f2f;
+    background-color: green;
+  }
 }
 
-#card-2 {
-  opacity: 0;
-  visibility: hidden;
+@keyframes hideAnimationLeft {
+  30% {
+    margin-right: 200rem;
+  }
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-#card-3 {
-  opacity: 0;
-  visibility: hidden;
+@keyframes hideAnimationRight {
+  30% {
+    margin-left: 200rem;
+  }
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
