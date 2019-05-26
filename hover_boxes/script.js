@@ -45,3 +45,4 @@ $('#left').on('click', function() {
 
 // Possibly just remove ability to click right?
 // When clicking right on secondary card shown, return to center screen?
+// Timeout function to change hideme-left to hideme and add showme to second item.

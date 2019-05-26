@@ -18,6 +18,16 @@
   }
 }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}
+
 .cards-container {
   display: flex;
   justify-content: center;
@@ -51,11 +61,17 @@
 .card {
   height: 100%;
   width: 100%;
-  background-color: pink;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
+  background: white;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
 
 // Animations
@@ -82,7 +98,18 @@
     width: 90%;
     height: 90%;
     box-shadow: 10px 0 10px #2f2f2f;
-    background-color: green;
+    background-color: gray;
+  }
+}
+
+@keyframes showAnimationLeft {
+  100% {
+    margin-right: 200rem;
+  }
+  0% {
+    margin-right: 0;
+    opacity: 1;
+    visibility: visible;
   }
 }
 

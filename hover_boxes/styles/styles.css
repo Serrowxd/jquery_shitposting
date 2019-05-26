@@ -15,6 +15,14 @@
   cursor: pointer;
   color: rgba(0, 225, 255, 0.7);
 }
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+.button-row button {
+  margin: 1rem;
+  padding: 0.5rem;
+}
 .cards-container {
   display: flex;
   justify-content: center;
@@ -43,11 +51,16 @@
 .card {
   height: 100%;
   width: 100%;
-  background-color: pink;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
+  background: white;
+}
+.card h1 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 @keyframes boxAnimation {
   20% {
@@ -63,7 +76,17 @@
     width: 90%;
     height: 90%;
     box-shadow: 10px 0 10px #2f2f2f;
-    background-color: green;
+    background-color: gray;
+  }
+}
+@keyframes showAnimationLeft {
+  100% {
+    margin-right: 200rem;
+  }
+  0% {
+    margin-right: 0;
+    opacity: 1;
+    visibility: visible;
   }
 }
 @keyframes hideAnimationLeft {
