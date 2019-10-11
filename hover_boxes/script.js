@@ -3,45 +3,47 @@ $('.move-button').on('click', function() {
 });
 
 $(document).ready(function() {
-  $('#card-1').addClass('showme');
+  $('#card-main').addClass('showme');
 });
 
 function hideCards() {
-  $('#card-1')
+  $('#card-main')
     .removeClass('showme')
     .removeClass('hideme-left')
     .removeClass('hideme-right');
-  $('#card-2')
+  $('#card-right')
     .removeClass('showme')
     .removeClass('hideme-left')
     .removeClass('hideme-right');
-  $('#card-3')
+  $('#card-left')
     .removeClass('showme')
     .removeClass('hideme-left')
     .removeClass('hideme-right');
 }
 
-$('#right').on('click', function() {
-  if ($('#card-2').hasClass('showme')) {
-    hideCards();
-    $('#card-1').addClass('showme');
-  } else {
-    hideCards();
-    $('#card-1').addClass('hideme-right');
-    $('#card-2').addClass('showme');
-  }
-});
+// $('#right').on('click', function() {
+//   if ($('#card-right').hasClass('showme')) {
+//     hideCards();
+//     $('#card-main').addClass('showme');
+//   } else {
+//     hideCards();
+//     $('#card-main').addClass('hideme-right');
+//     $('#card-right').addClass('showme');
+//   }
+// });
 
-$('#left').on('click', function() {
-  if ($('#card-3').hasClass('showme')) {
-    hideCards();
-    $('#card-1').addClass('showme');
-  } else {
-    hideCards();
-    $('#card-1').addClass('hideme-left');
-    $('#card-3').addClass('showme');
-  }
-});
+// $('#left').on('click', function() {
+//   if ($('#card-left').hasClass('showme')) {
+//     hideCards();
+//     $('#card-main').addClass('showme');
+//   } else {
+//     hideCards();
+//     $('#card-main').addClass('hideme-left');
+//     $('#card-left').addClass('showme');
+//   }
+// });
+
+$('#right').on('click', function() {});
 
 // Possibly just remove ability to click right?
 // When clicking right on secondary card shown, return to center screen?
